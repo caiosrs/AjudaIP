@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int menu;
+
+do{
+
+  printf ("Digite um valor de 1 a 4: \n");
+  printf ("\n===============================================\n\n");
+  printf (" 1. Cmd.\n\n 2. Ir ao IPv4 da sua internet.\n\n 3. Configuracoes do IPv4.\n\n 4. Possiveis resultados dos IP's\n\n");
+  printf ("\n-----------------------------------------------\n\n");
+  printf ("\n0 - para Fechar\n");
+  printf ("\n===============================================\n\n");
+  scanf("%d", &menu);
+  
+  switch ( menu )
+  {
+  	
+    case 1 :
+    printf ("Aperte o botao WINDOWS + R > Digite [cmd] > Ok > Digite [ipconfig] > Aperte Enter > Busque pelo numero que se encontra em Endereco IPV4. \n");
+    break;
+    
+    case 2 :
+    printf ("Aperte WINDONS + R > Digite [control netconnections] > Ok > Botao direito na internet que esta usando [Ethernet ou Wifi] > Propriedades > Busque pelo [Protocolo IP Versao 4] > Propriedades.");
+    break;
+    
+    case 3 :
+    printf ("Clique em [Usar o seguinte endereco de IP] > Em Endereco IP: [Coloque o IPv4 que esta no cmd] > em Mascara de sub-rede coloque [255.255.255.0] > em Gateway padrao coloque [10.1.1.1].\n");
+    printf ("Em Servidor DNS preferencial digite [10.1.1.1] > Em Servidor DNS alternativo coloque o mesmo IPv4 do cmd > Ok > Fechar.\n");
+    break;
+    
+    case 4 :
+    printf ("- Se em IPv4 no cmd aparecer um numero iniciado com 10, use esse IP.\n");
+    printf ("- Se seu IPv4 no cmd aparecer um numero iniciado com 169, digite 5.\n");
+    printf ("- Se seu IPv4 no cmd aparecer um numero iniciado com 192, digite 6.\n");
+    break;
+    
+    case 5 :
+    printf ("\nPasso 1 = Aperte WINDONS + R > Digite [control netconnections] > Ok > Botao direito na internet que esta usando [Ethernet ou Wifi] > Propriedades > Busque pelo [Protocolo IP Versao 4] > Propriedades.\n");
+    printf ("\nPasso 2 = Clique em [Obter um endereco IP automaticamente] > clique em [Obter o endereco dos servidores DNS automaticamente] > Ok > Fechar\n");
+    printf ("\nPasso 3 = Aperte o botao WINDOWS + R > Digite [cmd] > Ok > Digite [ipconfig] > Aperte Enter > Busque pelo numero que se encontra em Endereco IPV4. \n");
+    printf ("\nPasso 4 = Clique em [Usar o seguinte endereco de IP] > Em Endereco IP: [Coloque o IPv4 que esta no cmd] > em Mascara de sub-rede coloque [255.255.255.0] > em Gateway padrao coloque [10.1.1.1].\n");
+    printf ("\nPasso 5 = Em Servidor DNS preferencial digite [10.1.1.1] > Em Servidor DNS alternativo coloque o mesmo IPv4 do cmd > Ok > Fechar.\n");
+    break;
+    
+    case 6 :
+    printf ("\nPasso 1 = Aperte o botao WINDOWS + R > Digite [cmd] > Ok > Digite [ipconfig] > Aperte Enter > Busque pelo numero que se encontra em Endereco IPV4. \n");
+    printf ("\nPasso 2 = Clique em [Usar o seguinte endereco de IP] > Em Endereco IP: [10.1.1.(Qualquer numero do 1 ao 254)] > em Mascara de sub-rede coloque [255.255.255.0] > em Gateway padrao coloque [10.1.1.1].\n");
+    printf ("\nPasso 3 = Em Servidor DNS preferencial digite [10.1.1.1] > Em Servidor DNS alternativo coloque o mesmo IPv4 do cmd > Ok > Fechar.\n");
+    printf ("\nTente ate achar um IPv4 livre para uso.\n");
+    break;
+    
+    case 0:
+    printf ("\n-----------------------------------------------\n\n");
+    printf ("\nSaindo...\n");
+    printf ("\n-----------------------------------------------\n\n");
+    return 0;
+    break;
+    
+    default :
+    printf ("Valor invalido!\n");
+
+  }
+  printf("\n\n>>>>>     Sua escolha foi: %d    <<<<<\n\n", menu);
+  
+  }while(menu);
+  
+  system("pause");
+}
